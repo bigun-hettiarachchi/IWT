@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="logincss.css"> <!-- Link to external CSS -->
 </head>
 
-<body style="background-image: url(image/login3.jpg); background-size: cover;background-position: center;" >
+<body style="background-image: url(login3.jpg); background-size: cover;background-position: center;" >
     <div class="container">
         <header>
             <h1>BrightSpark Ads</h1>
