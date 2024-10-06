@@ -25,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	//Insert into database
 	$sql = "INSERT into user (firstname, lastname, ID, gender, mobile, email, DOB, role, psw) VALUES ('$fname', '$lname', '$id', '$gender', '$mobile', '$email', '$dob', '$role', '$psw')";
 
+<<<<<<< Updated upstream
     //check if  the insert was successful
     if($conn->query($sql) == TRUE)
 	{
@@ -33,6 +34,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }else{
 	echo "Error : " .$sql . "<br>" . $conn->error;
 	}}
+=======
+		//Insert into database
+		$sql = "INSERT into user (firstname, lastname, gender, mobile, email, DOB, role, psw) VALUES ('$fname', '$lname', '$gender', '$mobile', '$email', '$dob', '$role', '$psw')";
+
+		//check if  the insert was successful
+		if ($conn->query($sql) == TRUE) {
+			echo "<script>alert('Data added successfully ')</script>";
+			echo "<script>window.location.href = 'profile.php'</script>";
+		} else {
+			echo "Error : " . $sql . "<br>" . $conn->error;
+		}
+	}
+>>>>>>> Stashed changes
 }
 //close connection
 $conn->close();
